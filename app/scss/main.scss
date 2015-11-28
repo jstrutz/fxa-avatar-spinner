@@ -1,3 +1,123 @@
 body {
-  background: gray;
+  background: white;
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+
+$spinner-color: #C3CFD8;
+$spinner-width: 4%;
+$spinner-period: 2s;
+
+.avatar-view {
+  width: 120px;
+  height: 120px;
+}
+.loader {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  top: 0; left: 0;
+  transform: scale(1 - $spinner-width / 100%);
+  background-color: white;
+  z-index: 1;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   border-radius: 50%;
+  //   content: '';
+  //   display: inline-block;
+
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    background-image: linear-gradient($spinner-color, $spinner-color),
+      linear-gradient(45deg, $spinner-color, $spinner-color 50%, rgba($spinner-color, 0) 75%, rgba($spinner-color, 0));
+    background-size: 50% 100%, 50% 200%;
+    background-position: 0 0%, 100% 0%;
+    // background-position: left, right;
+    background-repeat: no-repeat, no-repeat;
+    // transition: background-position 0.3s, background-size 0.3s;
+    // transition-property: background-position, background-size, opacity;
+    // transition-property: transform;
+
+    // transition-delay: 0, 0, 0.4s;
+    // transition-duration: 0.4s;
+    // transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    // transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    transform: rotate(0deg);
+    transition: transform 0.4s ease-in;
+
+    // animation-duration: $spinner-period;
+    // animation-name: spin;
+    // animation-iteration-count: infinite;
+    // animation-timing-function: linear;
+    // animation-play-state: paused;
+  }
+  &::after {
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0; left: 0;
+    border-radius: 50%;
+    background-image: linear-gradient($spinner-color, $spinner-color);
+    background-size: 51% 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+  &:hover {
+    // background-image: url(https://en.gravatar.com/userimage/5440833/39bdd5d67430094101ff4cd0ae68ab64.jpg?size=120);
+    &::before {
+      transform: rotate(-180deg);
+      // background-size: 66% 100%, 50% 200%;
+      // background-position: 0% 0%, 100% 100%;
+      // opacity: 0;
+      // animation-play-state: paused;
+    }
+    &::after {
+      // transform: scale(1 + $spinner-width / 100%);
+      // transform: scale(0);
+      // opacity: 0;
+    }
+  }
+
+  // &::after {
+  //   width: 100%;
+  //   height: 100%;
+  //   transform: scale(1 - $spinner-width / 100%);
+  //   background-color: white;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   border-radius: 50%;
+  //   content: '';
+  //   display: inline-block;
+  //   // opacity: 0;
+  //   // transition-property: transform, opacity;
+  //   transition-property: all;
+  //   transition-duration: 0.2s;
+  //   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  //   transition-delay: 0.2s;
+  // }
+
 }

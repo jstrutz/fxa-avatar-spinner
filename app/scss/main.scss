@@ -5,7 +5,7 @@ $spinner-width: 3%;
 $spinner-period: 2s;
 $spinner-complete-delay: 0;
 $spinner-complete-duration: 300ms;
-$spinner-fade-delay: $spinner-complete-duration;
+$spinner-fade-delay: $spinner-complete-duration - 100ms;
 $spinner-fade-duration: 150ms;
 $spinner-center-expand-delay: $spinner-complete-duration;
 $spinner-center-expand-duration: 0.2s;

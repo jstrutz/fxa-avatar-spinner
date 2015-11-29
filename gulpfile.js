@@ -2,6 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var path        = require('path');
+var ghPages     = require('gulp-gh-pages');
 
 var APP_PATH = './app';
 var SCSS_SOURCES = [
@@ -24,6 +25,11 @@ gulp.task('sass', function() {
     .pipe(sass())
     .pipe(gulp.dest(path.join(APP_PATH,'styles')))
     .pipe(browserSync.stream());
+});
+
+gulp.task('deploy', function() {
+  return gulp.src(path.join(APP_PATH, '**','*'))
+      .pipe(ghPages());
 });
 
 gulp.task('default', ['serve']);

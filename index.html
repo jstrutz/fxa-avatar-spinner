@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-touch no-reveal-pw getusermedia" lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="styles/fxa-content-server-normalize.css"></link>
+    <link rel="stylesheet" href="styles/fxa-content-server-en.css"></link>
+    <link rel="stylesheet" href="styles/fxa-content-server-main.css"></link>
+    <link rel="stylesheet" href="styles/main.css"></link>
+  </head>
+
+<body class="">
+        <div style="opacity: 1;" class="fade-in-forward" id="fox-logo"></div>
+        <div style="opacity: 1;" class="fade-in-forward" id="stage"><div class="sign-in"><div id="main-content" class="card">
+  <header>
+    <h1 id="fxa-signin-header">
+        Sign in
+    </h1>
+  </header>
+
+  <section>
+
+
+      <div style="" class="success"></div>
+
+          <div class="avatar-wrapper avatar-view">
+            <div class="avatar-loading-spinner"></div>
+            <img src="https://en.gravatar.com/userimage/5440833/39bdd5d67430094101ff4cd0ae68ab64.jpg?size=120">
+          </div>
+          <p class="prefill">user@example.com</p>
+
+          <form novalidate="">
+            <input class="email hidden" value="user@example.com" type="email">
+
+            <div class="input-row password-row">
+              <input class="password tooltip-below" id="password" placeholder="Password" value="" pattern=".{8,}" required="" autofocus="" type="password">
+
+              <input id="show-password" class="show-password" aria-controls="password" tabindex="-1" data-novalue="" type="checkbox">
+              <label for="show-password" class="show-password-label">
+                Show
+              </label>
+            </div>
+
+            <div class="button-row">
+              <button id="submit-btn" type="submit" class="disabled">Sign in</button>
+            </div>
+           </form>
+
+           <div class="links">
+             <a href="/reset_password" class="left reset-password">Forgot password?</a>
+             <a href="/#" class="right use-different">Use a different account</a><br>
+           </div>
+
+
+
+  </section>
+</div>
+</div></div>
+
+        <a id="about-mozilla" rel="author" target="_blank" href="https://www.mozilla.org/about/?utm_source=firefox-accounts&amp;utm_medium=Referral"></a>
+
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- this will be overwritten if JS is enabled -->
+        <!--[if !(IE) | (gte IE 10)]><!-->
+        <noscript>
+          Firefox Accounts requires JavaScript.
+        </noscript>
+        <!--<![endif]-->
+
+          <button id="loadButton">Loaded</button>
+
+        <script src="main.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 $avatar-size: 120px;
 $spinner-color: #C3CFD8;
 $background-color: white;
-$spinner-width: 4%;
+$spinner-width: 3%;
 $spinner-period: 2s;
 $spinner-complete-delay: 0;
 $spinner-complete-duration: 300ms;
@@ -23,17 +23,6 @@ $spinner-center-expand-duration: 0.2s;
     to {transform:rotate(360deg);}
 }
 
-
-// .avatar-view {
-//   width: $avatar-size;
-//   height: $avatar-size;
-//   position: relative;
-// }
-
-.profile-image {
-  border-radius: 50%;
-}
-
 %fill-avatar {
   display: inline-block;
   width: 100%;
@@ -43,7 +32,23 @@ $spinner-center-expand-duration: 0.2s;
 
 .avatar-view {
   position: relative;
+  &.with-default {
+    background: transparent url("../images/default-profile.svg") no-repeat scroll center center;
+  }
 }
+
+.profile-image {
+  border-radius: 50%;
+  // On some browsers, there is a faint glimpse of the edge of the profile
+  // image element, despite being overlaid with an element of the "same" size.
+  // Add a subpixel subpixel solid border on the image to prevent this.
+  border: 0.5px solid $background-color;
+  display: none !important; // hack because we're overriding existing styles copied over from fxa-content-server
+  &.show {
+    display: block !important;
+  }
+}
+
 
 .avatar-loading-spinner {
   @extend %fill-avatar;
@@ -68,10 +73,6 @@ $spinner-center-expand-duration: 0.2s;
     iteration-count: infinite;
     timing-function: linear;
   }
-
-  // On some browsers, there is a faint line of the box-shadow;
-  // hide it with a subpixel solid border
-  border: 0.5px solid $background-color;
 
   // Spinner fades out, after it has "completed"
   opacity: 1;
@@ -106,6 +107,7 @@ $spinner-center-expand-duration: 0.2s;
       property: transform;
       duration: $spinner-complete-duration;
       delay: $spinner-complete-delay;
+      // timing-function: ease-in;
     }
   }
   &.loaded::before {
@@ -125,9 +127,18 @@ $spinner-center-expand-duration: 0.2s;
       property: transform;
       duration: $spinner-center-expand-duration;
       delay: $spinner-center-expand-delay;
+      // timing-function: ease-in;
     }
   }
   &.loaded::after {
     transform: scale(1 + $spinner-width / 100%);
   }
+}
+
+.mockup-panel {
+  padding: 1em;
+  border: 1px dashed #424F59;
+  margin: 2em auto;
+  width: 420px;
+  header { font-weight: bold; }
 }

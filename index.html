@@ -23,7 +23,7 @@
 
           <div class="avatar-wrapper avatar-view">
             <div class="avatar-loading-spinner"></div>
-            <img src="https://en.gravatar.com/userimage/5440833/39bdd5d67430094101ff4cd0ae68ab64.jpg?size=120">
+            <img class="profile-image" src="https://en.gravatar.com/userimage/5440833/39bdd5d67430094101ff4cd0ae68ab64.jpg?size=120">
           </div>
           <p class="prefill">user@example.com</p>
 
@@ -68,7 +68,12 @@
         </noscript>
         <!--<![endif]-->
 
-          <button id="loadButton">Loaded</button>
+        <section class="mockup-panel">
+          <header>FxA Avatar Spinner Mockup for <a href="https://github.com/mozilla/fxa-content-server/issues/3277">issue 3277</a></header>
+          <button id="loadImageButton">Show Profile Image</button>
+          <button id="loadDefaultButton">Show Default Avatar</button>
+          <button id="resetButton">Reset</button>
+        </section>
 
         <script src="main.js"></script>
 </body>

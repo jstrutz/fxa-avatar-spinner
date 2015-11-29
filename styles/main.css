@@ -51,7 +51,7 @@
   opacity: 1;
   transition-property: opacity;
   transition-duration: 150ms;
-  transition-delay: 300ms; }
+  transition-delay: 200ms; }
   .avatar-loading-spinner.loaded {
     opacity: 0; }
   .avatar-loading-spinner::before {

@@ -3,37 +3,35 @@
   font-family: 'Clear Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/latin/clearsans-regular.eot');
+  src: url('fonts/latin/clearsans-regular.eot');
   src: local('Clear Sans'),
        local('ClearSans'),
-       url('/fonts/latin/clearsans-regular.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/latin/clearsans-regular.woff') format('woff'),
-       url('/fonts/latin/clearsans-regular.ttf') format('truetype'),
-       url('/fonts/latin/clearsans-regular.svg#clearsans-regular') format('svg');
+       url('fonts/latin/clearsans-regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/latin/clearsans-regular.woff') format('woff'),
+       url('fonts/latin/clearsans-regular.ttf') format('truetype'),
+       url('fonts/latin/clearsans-regular.svg#clearsans-regular') format('svg');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/latin/firasans-regular.eot');
+  src: url('fonts/latin/firasans-regular.eot');
   src: local('Fira Sans'),
        local('FiraSans-Regular'),
-       url('/fonts/latin/firasans-regular.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/latin/firasans-regular.woff') format('woff'),
-       url('/fonts/latin/firasans-regular.ttf') format('truetype'),
-       url('/fonts/latin/firasans-regular.svg#firasans-regular') format('svg');
+       url('fonts/latin/firasans-regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/latin/firasans-regular.woff') format('woff'),
+       url('fonts/latin/firasans-regular.ttf') format('truetype'),
+       url('fonts/latin/firasans-regular.svg#firasans-regular') format('svg');
 }
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 300;
-  src: url('/fonts/latin/firasans-light.eot');
+  src: url('fonts/latin/firasans-light.eot');
   src: local('Fira Sans Light'),
        local('FiraSans-Light'),
-       url('/fonts/latin/firasans-light.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/latin/firasans-light.woff') format('woff'),
-       url('/fonts/latin/firasans-light.ttf') format('truetype'),
-       url('/fonts/latin/firasans-light.svg#firasans-light') format('svg');
+       url('fonts/latin/firasans-light.eot?#iefix') format('embedded-opentype'),
+       url('fonts/latin/firasans-light.woff') format('woff'),
+       url('fonts/latin/firasans-light.ttf') format('truetype'),
+       url('fonts/latin/firasans-light.svg#firasans-light') format('svg');
 }
-
-

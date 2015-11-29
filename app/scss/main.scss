@@ -10,10 +10,6 @@ $spinner-fade-duration: 150ms;
 $spinner-center-expand-delay: $spinner-complete-duration;
 $spinner-center-expand-duration: 0.2s;
 
-body {
-  background: $background-color;
-}
-
 @-moz-keyframes spin {
     from { -moz-transform: rotate(0deg); }
     to { -moz-transform: rotate(360deg); }
@@ -28,11 +24,11 @@ body {
 }
 
 
-.avatar-view {
-  width: $avatar-size;
-  height: $avatar-size;
-  position: relative;
-}
+// .avatar-view {
+//   width: $avatar-size;
+//   height: $avatar-size;
+//   position: relative;
+// }
 
 .profile-image {
   border-radius: 50%;
@@ -45,9 +41,14 @@ body {
   border-radius: 50%;
 }
 
-.loader {
+.avatar-view {
+  position: relative;
+}
+
+.avatar-loading-spinner {
   @extend %fill-avatar;
   position: absolute;
+  top: 0; left: 0;
 
   // The spinner is comprised of a background section covering the left half
   // of the element, and an inset box shadow emenating from the from the
@@ -69,7 +70,7 @@ body {
   }
 
   // On some browsers, there is a faint line of the box-shadow;
-  // hide it with a 1px solid border
+  // hide it with a subpixel solid border
   border: 0.5px solid $background-color;
 
   // Spinner fades out, after it has "completed"
